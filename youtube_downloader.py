@@ -22,9 +22,9 @@ url = input("Enter YouTube URL: ")
 #     (For many cases, you can omit these if OAuth isn’t required, but here we include them to show how parameters work.)
 #   - on_progress_callback=on_progress: This function is called periodically to show download progress.
 # yt = YouTube(url, use_oauth=True, allow_oauth_cache=False, on_progress_callback=on_progress)
+yt = YouTube(url, on_progress_callback=on_progress)
 
 # Print the title of the video to confirm that the YouTube object is working.
-yt = YouTube(url, on_progress_callback=on_progress)
 print("Downloading:", yt.title)
 
 # Get the highest resolution progressive stream available.
